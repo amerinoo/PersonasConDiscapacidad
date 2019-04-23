@@ -1,0 +1,70 @@
+{
+  "name": "GDGxGood",
+  "description": "The GDGxGood is a game for Google Assistant.",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "walkthrough": "node app/walkthrough/walkthrough.js",
+    "walkthrough:watch": "npm-watch walkthrough"
+  },
+  "watch": {
+    "walkthrough": {
+      "patterns": [
+        ".",
+        "walkthrough",
+        "intents",
+        "lib",
+        "scure"
+      ],
+      "extensions": "js",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 1000,
+      "inherit": true
+    },
+    "test": {
+      "patterns": [
+        ".",
+        "app",
+        "data",
+        "intents",
+        "lib",
+        "scure"
+      ],
+      "extensions": "js",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 1000,
+      "inherit": true
+    }
+  },
+  "dependencies": {
+    "actions-on-google": "^2.1.1",
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.1.0",
+    "pluralize": "^7.0.0",
+    "scure": "1.4.2",
+    "scure-dialogflow": "1.4.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "mocha": "^5.1.1",
+    "npm-watch": "^0.3.0",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.0.0"
+  },
+  "private": true
+}
